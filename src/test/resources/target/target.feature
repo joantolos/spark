@@ -13,6 +13,6 @@ Feature: Target
   Scenario: David can sweet a big target
     Given David Target weights 107767
     When David jumps 3 times
-    Then my target should be a big target
+    Then his target should be a big target
     When David jumps 10 times
-    Then my target should be a tiny target
+    Then his target should be a tiny target

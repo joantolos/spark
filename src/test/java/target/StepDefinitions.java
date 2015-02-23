@@ -1,4 +1,4 @@
-package belly;
+package target;
 
 import com.joantolos.cucumber.Target;
 import cucumber.api.java.en.Given;
@@ -41,5 +41,11 @@ public class StepDefinitions {
     @When("^David jumps (\\d+) times$")
     public void david_jumps_times(int jumpingRepetitions) throws Throwable {
         this.jumpingRepetitions = jumpingRepetitions;
+    }
+
+    @Then("^his target should (.*)$")
+    public void his_target_should_be_a_big_target(String expectedSize) throws Throwable {
+        String targetSize = target.getTargetSize(this.jumpingRepetitions);
+        assertThat(targetSize, is(expectedSize));
     }
 }
