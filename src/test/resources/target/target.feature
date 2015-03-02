@@ -10,9 +10,9 @@ Feature: Target
     When I jump 5 time
     Then my target should be a tiny target
 
-  Scenario: David can sweet a big target
-    Given David Target weights 107767
-    When David jumps 3 times
+  Scenario: Adam can sweet a big target
+    Given Adam Target weights 107767
+    When Adam makes the target jump 3 times
     Then his target should be a big target
-    When David jumps 10 times
+    When Adam makes the target jump 10 times
     Then his target should be a tiny target

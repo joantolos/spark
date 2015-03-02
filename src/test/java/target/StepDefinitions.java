@@ -33,19 +33,13 @@ public class StepDefinitions {
         assertThat(targetSize, is(expectedSize));
     }
 
-    @Given("^David Target weights (\\d+)$")
-    public void david_Target_weights(int molecularWeight) throws Throwable {
+    @Given("^Adam Target weights (\\d+)$")
+    public void adam_Target_weights(int molecularWeight) throws Throwable {
         this.target = new Target(molecularWeight);
     }
 
-    @When("^David jumps (\\d+) times$")
-    public void david_jumps_times(int jumpingRepetitions) throws Throwable {
+    @When("^Adam makes the target jump (\\d+) times$")
+    public void adam_makes_the_target_jump_times(int jumpingRepetitions) throws Throwable {
         this.jumpingRepetitions = jumpingRepetitions;
-    }
-
-    @Then("^his target should (.*)$")
-    public void his_target_should_be_a_big_target(String expectedSize) throws Throwable {
-        String targetSize = target.getTargetSize(this.jumpingRepetitions);
-        assertThat(targetSize, is(expectedSize));
     }
 }

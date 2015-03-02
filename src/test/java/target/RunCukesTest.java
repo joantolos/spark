@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(format = {"pretty",
-        "html:target/cucumber-html-report/target",
-        "json:target_json/cucumber.json",
-        "junit:taget_junit/cucumber.xml"})
+        "html:target/html/target",
+        "json:target/json/cucumber.json",
+        "junit:target/junit/cucumber.xml"})
 public class RunCukesTest {
     
 }
